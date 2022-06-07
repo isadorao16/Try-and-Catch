@@ -29,30 +29,35 @@ function clickFileButton(){
 
 function clickNumberButton(){
 
-   number = document.getElementById("inputnumber").value
-   if( number>5==true && number<10==true){
+   document.getElementById('outputnumber').innerHTML = "  "
+   number = document.getElementById("inputnumber").value// .value traz um valor 
    
-     }
+   if( number>5==true && number<10==true){
+         }
 
      try {
          if( number>5==false || number<10== false ) throw (' Informe um valor maior que 5 e menor que 10')
-        
-        } 
+         } 
+
      catch (error) {
          document.getElementById('outputnumber').innerHTML = error
-     }
+         console.log("Erro "+error)
+         }
    
-
-
     try{
         if (number == '') throw 'Informe um valor';
         
-    }
+         }
     catch(erro){
         document.getElementById("outputnumber").innerHTML = erro;
-    }
+       
+         }
+    
     finally{
         alert('O número escolhido foi  '+number)
-    }
+        alert('Obrigada pela visita')
+         }
+
     console.log(number)
-}
+    }
+
